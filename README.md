@@ -17,14 +17,14 @@ Simple deduplication is included so you are not spammed with repeat notification
 ## Installation
 
 ```bash
-git clone https://github.com/hackerbartender/certwatcher.git
-cd certwatcher
+git clone https://github.com/Hackerbartender/CertWatcher.git
+cd CertWatcher
 pip install -r requirements.txt
 ```
 
 ## Configuration
 
-Open `CertWatcher.py` and edit the constants at the top of the file:
+Open `CertWatcher.py` and edit the variables at the top of the file:
 
 ```python
 # --- Configuration ---
