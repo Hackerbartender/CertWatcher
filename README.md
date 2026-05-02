@@ -28,10 +28,10 @@ Open `CertWatcher.py` and edit the constants at the top of the file:
 
 ```python
 # --- Configuration ---
-NTFY_TOPIC = "your-ntfy-topic"   # Your ntfy.sh topic name
-NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
-DOMAINS_FILE = "domains.txt"     # Path to your list of domains to monitor
-SEEN_FILE = "seen.txt"           # Deduplication cache (created automatically)
+ntfyTopic = "your-ntfy-topic"   # Your ntfy.sh topic name
+ntfyURL = f"https://ntfy.sh/{ntfyTopic}"
+domainsFile = "domains.txt"     # Path to your list of domains to monitor
+seenFile = "seen.txt"           # Deduplication cache (created automatically)
 ```
 
 ## Usage

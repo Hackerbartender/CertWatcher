@@ -5,25 +5,25 @@ import subprocess
 import requests
 
 # --- Configuration ---
-NTFY_TOPIC = "your-ntfy-topic"
-NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
-DOMAINS_FILE = "domains.txt"
-SEEN_FILE = "seen.txt"
+ntfyTopic = "your-ntfy-topic"
+ntfyURL = f"https://ntfy.sh/{ntfyTopic}"
+domainsFile = "domains.txt"
+seenFile = "seen.txt"
 
 def load_seen():
     try:
-        with open(SEEN_FILE, "r") as f:
+        with open(seenFile, "r") as f:
             return set(line.strip() for line in f if line.strip())
     except FileNotFoundError:
         return set()
 
 def mark_seen(entry):
-    with open(SEEN_FILE, "a") as f:
+    with open(seenFile, "a") as f:
         f.write(entry + "\n")
 
 def notify(domain):
     try:
-        response = requests.post(NTFY_URL,
+        response = requests.post(ntfyURL,
             data=domain,
             headers={
                 "Title": "New Cert Detected",
@@ -39,7 +39,7 @@ def notify(domain):
 seen = load_seen()
 
 with subprocess.Popen(
-    ["gungnir", "-r", DOMAINS_FILE],
+    ["gungnir", "-r", domainsFile],
     stdout=subprocess.PIPE,
     text=True
 ) as process:
