@@ -1,0 +1,5 @@
+seen.txt
+domains.txt
+__pycache__/
+*.pyc
+.env
