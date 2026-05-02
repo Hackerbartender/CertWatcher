@@ -4,7 +4,6 @@ import sys
 import subprocess
 import requests
 
-# --- Configuration ---
 ntfyTopic = "your-ntfy-topic"
 ntfyURL = f"https://ntfy.sh/{ntfyTopic}"
 domainsFile = "domains.txt"
